@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="IT.SiteMaster" %>
+
+<link rel="stylesheet" href="data_c/css_theme/jquery-ui.css" />
+<link rel="stylesheet" href="data_c/css_theme/jquery-ui.min.css"/>
+<link rel="stylesheet" href="data_c/css_theme/jquery-ui.structure.css"/>
+<link rel="stylesheet" href="data_c/css_theme/jquery-ui.theme.css"/>
+<link rel="stylesheet" href="Scripts/java/jquery.contextmenu.css">
+<link rel="stylesheet" href="Scripts/java/jquery-ui.css"/>
+<link rel="stylesheet" href="Scripts/java/editor.jqueryui.min.css"/>
+<link rel="stylesheet" href="Scripts/java/dataTables.jqueryui.min.css"/>
+<link rel="stylesheet" href="Scripts/java/select.jqueryui.min.css"/>
+<link rel="stylesheet" href="Scripts/java/buttons.jqueryui.min.css"/>
+<link rel="stylesheet" href='../data_c/fullcalendar.css'/>
+<link rel="stylesheet" href="Content/Sitemaster.css">
+
+<script src="Scripts/java/jquery-1.12.4.js"></script>
+<script src="Scripts/java/jquery-ui.js"></script>
+<script src="Scripts/java/jquery.dataTables.min.js"></script>
+<script src="Scripts/java/dataTables.buttons.min.js"></script>
+<script src="Scripts/java/buttons.jqueryui.min.js"></script>
+<script src="Scripts/java/dataTables.jqueryui.min.js"></script>
+<script src="Scripts/java/dataTables.select.min.js"></script>
+<script src="Scripts/java/buttons.print.min.js"></script>
+<script src="Scripts/java/jquery.contextmenu.js"></script>
+<script src="Scripts/Sitemaster.js"></script>
+
+<script type="text/javascript"src='../data_c/lib/jquery.min.js'></script>
+<script type="text/javascript" src='../data_c/lib/moment.min.js'></script>
+<script type="text/javascript"src='../data_c/fullcalendar.min.js'></script>
+<script type="text/javascript" src="data_c/jquery-ui.js"></script>
+<!-- Included all the scripts required -->
+
+
+<html lang="en">
+
+<head runat="server">
+    <meta charset="utf-8" />
+        <title><%: Page.Title %>
+        </title>
+            <meta name="viewport" content="width=device-width" />
+                <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server" EnablePageMethods="true">
+        </asp:ScriptManager>
+<header>
+    <div class="content-wrapper">
+        <% string username = Context.User.Identity.Name; %>
+        <ul id="menu" >
+            <li>
+            <a href="#" class="drop">IT Centre</a>
+            <!-- Begin IT Centre Item -->
+                <div class="dropdown_2columns">
+                <!-- Begin 2 columns container -->
+                    <h2>IT Centre</h2>
+                        <ul id="menu2">
+                        </ul>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="100px">  
+                    </asp:DropDownList>
+                </div>
+                <!-- End 2 columns container -->
+            </li>
+            <!-- End IT Centre Item -->
+            
+            <li>
+            <a href="#" class="drop">Scheduling</a>
+            <!-- Begin Scheduling Item -->
+                <div class="dropdown_5columns">
+                <!-- Begin 4 columns container -->
+                <div class="col_1">
+                    <h3 id ="h3-title1"></h3>
+                        <ul id ="menu3">
+                        </ul>   
+                </div>
+            </div>
+                </ul>
+        </div>
+     
+    </header>
+    <div id="body">
+        <br />
+             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        <section class="content-wrapper main-content clear-fix">
+        </section>
+    </div>
+    <footer>
+        <div class="below">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+
+        </div>
+
+    </footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿#centerDiv {
+    width: 1200px;
+    height:800px;
+    margin: 0 auto;
+  }
+
+  #vCalendar {
+    width:900px;
+    height:800px;
+  }
+    #external-events {
+    float: right;
+    width: 250px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    text-align: left;
+  }
+    #external-OT {
+            float: left;
+    width: 20px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    text-align: left;
+    }
+
+  #external-events h4 {
+    font-size: 16px;
+    margin-top: 0;
+    padding-top: 1em;
+  }
+
+  #external-events .fc-event {
+    margin: 10px 0;
+    cursor: pointer;
+ }
+  #external-events .fc-event1 {
+    margin: 10px 0;
+    cursor: pointer;
+	background-color: Blue;
+ }
+
+  #external-events p {
+    margin: 1.5em 0;
+    font-size: 11px;
+    color: #666;
+  }
+
+  #external-events p input {
+    margin: 0;
+    vertical-align: middle;
+  }
+    #ext-software {
+            float: right;
+    width: 20px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    text-align: left;
+    }
+    .flappy-dialog {
+  background-color: #ffffff;
+  border-radius: 2px;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  transform-origin: center center;
+  transition: transform 0.4s ease;
+}
+
+.flappy-dialog.hidden {
+  transform: rotateX(-90deg);
+}
+
+element		{ font-size:12px; position:absolute; }
+#element-6		{ color:gray; margin:-23px 0 0 10px; z-index:6; }body {
+}
